@@ -1,0 +1,14 @@
+{
+  "hardware_smoke.py": {
+    "bytes": 4901,
+    "sha256": "11c5b291e1c5532e8024df6f262c6eb3f28b86a58bd452016f08cc43b1038fc0"
+  },
+  "public-report.md": {
+    "bytes": 5734,
+    "sha256": "a50375f9b5633053943409c0a79da62e9cc2bb8af50ecc8bcab7eb64c724d693"
+  },
+  "public-results.json": {
+    "bytes": 18946,
+    "sha256": "a7659a22bd6d79e37f2c9d9bafd5a32e98a5cea44e8435fbe5481586c024fb0d"
+  }
+}

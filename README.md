@@ -2,13 +2,13 @@
 
 Community **PYNQ 4.0.0** SD-image port for the production **ZCU102**, using **Vivado/Vitis 2025.2** and AMD EDF. Ubuntu 24.04 and Python 3.12 come from the official PYNQ root filesystem.
 
-**Status: experimental SD image built and checked offline; physical board boot and runtime tests remain pending.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; neither physical revision is verified here. RevA/RevB engineering samples and modified memory configurations are outside this target.
+**Status: experimental PS-only image; the exact release image has booted on a physical ZCU102, and authenticated Jupyter execution passed.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; the physical PCB revision of the tested unit was not independently established. RevA/RevB engineering samples and modified memory configurations are outside this target.
 
 This is a **PS-only boot image port**. It provides Linux/PYNQ infrastructure and requires a user-supplied, compatible application overlay. It does not bundle a base/HDMI/FMC/DMA/PL-DDR design or claim those interfaces work. No RF converter libraries or CLK104 configuration are added by the board recipe.
 
 ## Image download
 
-Download the image and `SHA256SUMS` from the [experimental PYNQ 4 release](https://github.com/Seguar/ZCU102-PYNQ/releases/tag/v4.0.0-zcu102.1-rc1). Use a **16 GB or larger SD card**; the raw image is 8,266,973,184 bytes. The exact image passed offline filesystem, boot-artifact, device-tree, identity and module checks. ARM QEMU imports/math passed. It has **not** been boot-tested on the physical board. The release supplies provenance, package inventory, kernel configuration and resolved EDF layer revisions.
+Download the image and `SHA256SUMS` from the [experimental PYNQ 4 release](https://github.com/Seguar/ZCU102-PYNQ/releases/tag/v4.0.0-zcu102.1-rc1). Use a **16 GB or larger SD card**; the raw image is 8,266,973,184 bytes. The exact image passed offline filesystem, boot-artifact, device-tree, identity and module checks. ARM QEMU imports/math passed. The exact bytes were flashed, fully read back with a matching SHA256, and booted on a physical ZCU102. On-board identity, imports, dependency pins, memory/storage, NumPy and authenticated Jupyter checks passed. **Allocation remains unverified: a compatible overlay must be loaded first.** Reboot persistence and PL peripherals are untested. See the [hardware results](docs/validation.md#physical-validation-2026-11-16). The release supplies provenance, package inventory, kernel configuration and resolved EDF layer revisions.
 
 ## Build
 
@@ -44,7 +44,7 @@ Output: `PYNQ/sdbuild/output/ZCU102-4.0.0.img`. See [build details](docs/build.m
 - Offline identity cleanup and per-device SSH host-key generation ordered before both SSH service and socket.
 - Non-RF self-test manifest; no automatic FPGA programming or peripheral output tests.
 
-Default hostname is `pynq-zcu102`. Ethernet uses DHCP plus the standard PYNQ fallback `192.168.2.99`; avoid duplicate fallback addresses on the same link. Factory login is `xilinx` / `xilinx`; change factory passwords after first use. mDNS resolution is not promised.
+Default hostname is `pynq-zcu102`. Ethernet uses DHCP plus the standard PYNQ fallback `192.168.2.99`; avoid duplicate fallback addresses on the same link. Factory login is `xilinx` / `xilinx`; change factory passwords after first use. mDNS resolution is not promised. See [first-boot instructions](docs/bringup.md) for SD boot switches, UART selection, LAN naming and allocation prerequisites.
 
 ## Sources
 

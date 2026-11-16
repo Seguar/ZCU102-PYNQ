@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "image-built-offline-validated",
+  "status": "physical-boot-and-ps-software-validated-allocation-incomplete",
   "release": "v4.0.0-zcu102.1-rc1",
   "checks": {
     "source_contract": "PASS",
@@ -20,7 +20,15 @@
     "exact_image_modules_and_zocl_index": "PASS",
     "exact_image_ssh_unit_ordering": "PASS",
     "installed_python_git_commits": "PASS",
-    "arm_user_qemu_imports_and_numpy_math": "PASS"
+    "arm_user_qemu_imports_and_numpy_math": "PASS",
+    "whole_sd_flash_flush_full_readback_sha256": "PASS",
+    "physical_zcu102_boot": "PASS",
+    "onboard_identity_versions_pins_numpy": "PASS",
+    "authenticated_jupyter_identity_and_numpy": "PASS",
+    "root_filesystem_expansion": "PASS",
+    "xrt_embedded_device_discovery_with_profile": "PASS",
+    "allocation_4k_and_1m": "NOT_PASSED: Overlay is not downloaded",
+    "normal_reboot_persistence": "NOT_TESTED: existing console session"
   },
   "identity_tests_passed": 3,
   "python_distributions_recorded": 288,
@@ -32,8 +40,11 @@
   "configured_ps_reference_hz": 33330000,
   "clock_limit": "Configured preset/DT value, not measured; stock PYNQ UltraScale helper retains 33.333 MHz approximation",
   "not_verified": [
-    "Physical ZCU102 boot",
-    "Physical Jupyter execution and allocation",
-    "Application overlays, GPIO, DMA, FMC, video, PL DDR"
-  ]
+    "Successful PYNQ buffer allocation/synchronization (requires compatible loaded overlay)",
+    "Normal reboot/persistence retest",
+    "Application overlays, GPIO, DMA, FMC, video, PL DDR",
+    "Physical PCB revision and instrument-measured clocks"
+  ],
+  "hardware_evidence": "hardware/2026-11-16/public-results.json",
+  "installation_note": "Live hostname/LLMNR customizations are absent from the unchanged release image."
 }
