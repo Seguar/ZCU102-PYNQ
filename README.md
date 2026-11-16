@@ -2,9 +2,9 @@
 
 Community **PYNQ 4.0.0** SD-image port for the production **ZCU102**, using **Vivado/Vitis 2025.2** and AMD EDF. Ubuntu 24.04 and Python 3.12 come from the official PYNQ root filesystem.
 
-**Status: experimental PS-only image; physical boot, two normal reboots, matched test-overlay programming, allocation/synchronization and authenticated Jupyter checks passed.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; the physical PCB revision of the tested unit was not independently established. RevA/RevB engineering samples and modified memory configurations are outside this target.
+**Status: experimental PS-only image; physical boot, two normal reboots, matched test-overlay programming, allocation/synchronization and authenticated Jupyter checks passed.** It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; the physical PCB revision of the tested unit was not independently established. RevA/RevB engineering samples and modified memory configurations are outside this target.
 
-This is a **PS-only boot image port**. It provides Linux/PYNQ infrastructure and requires a user-supplied, compatible application overlay. It does not bundle a base/HDMI/FMC/DMA/PL-DDR design or claim those interfaces work. No RF converter libraries or CLK104 configuration are added by the board recipe.
+This is a **PS-only boot image port**. It provides Linux/PYNQ infrastructure and requires a user-supplied, compatible application overlay. It does not bundle a base/HDMI/FMC/DMA/PL-DDR design or claim those interfaces work.
 
 ## Image download
 
@@ -42,7 +42,7 @@ Output: `PYNQ/sdbuild/output/ZCU102-4.0.0.img`. See [build details](docs/build.m
 - Explicit selection and validation of the final Linux DTB before image assembly.
 - Metadata/utility Git dependencies pinned, with installed `direct_url.json` commit verification.
 - Offline identity cleanup and per-device SSH host-key generation ordered before both SSH service and socket.
-- Non-RF self-test manifest; no automatic FPGA programming or peripheral output tests.
+- PS-only self-test manifest; no automatic FPGA programming or peripheral output tests.
 
 Default hostname is `pynq-zcu102`. Ethernet uses DHCP plus the standard PYNQ fallback `192.168.2.99`; avoid duplicate fallback addresses on the same link. Factory login is `xilinx` / `xilinx`; change factory passwords after first use. mDNS resolution is not promised. See [first-boot instructions](docs/bringup.md) for SD boot switches, UART selection, LAN naming and allocation prerequisites.
 
