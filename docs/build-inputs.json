@@ -1,0 +1,18 @@
+{
+  "pynq_tag": "v4.0.0",
+  "pynq_commit": "d90670c69f7b71ea1a5d23aaa3e0ec713ff5fa9f",
+  "tools": "2025.2",
+  "edf_manifest": "amd-edf-rel-v25.11.1",
+  "part": "xczu9eg-ffvb1156-2-e",
+  "board_preset": "xilinx.com:zcu102:part0:3.4",
+  "sdt_board": "zcu102-rev1.0",
+  "ps_ddr_bytes": 4294967296,
+  "ps_reference_hz": 33333333,
+  "machine": "zynqmp-zcu102-pynq",
+  "boot_overlay": null,
+  "scope": "PS-only boot image; user-supplied application overlay, no PL peripheral support claimed",
+  "python_git_dependencies": {
+    "PYNQ-Metadata": "7ff39f7e699b854973e4f894fb6e5272534a42f7",
+    "PYNQ-Utils": "fe88b2fd04b6789bd2c9d50c47b140e8453a6886"
+  }
+}

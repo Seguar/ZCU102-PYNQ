@@ -1,0 +1,15 @@
+[Unit]
+Description=Generate missing per-device SSH host keys
+DefaultDependencies=no
+Conflicts=shutdown.target
+Before=ssh.service ssh.socket shutdown.target
+After=local-fs.target systemd-random-seed.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ssh-keygen -A
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=ssh.service ssh.socket
