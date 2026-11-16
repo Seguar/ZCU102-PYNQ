@@ -7,12 +7,13 @@
   "board_preset": "xilinx.com:zcu102:part0:3.4",
   "sdt_board": "zcu102-rev1.0",
   "ps_ddr_bytes": 4294967296,
-  "ps_reference_hz": 33333333,
+  "ps_reference_hz": 33330000,
   "machine": "zynqmp-zcu102-pynq",
   "boot_overlay": null,
   "scope": "PS-only boot image; user-supplied application overlay, no PL peripheral support claimed",
   "python_git_dependencies": {
     "PYNQ-Metadata": "7ff39f7e699b854973e4f894fb6e5272534a42f7",
     "PYNQ-Utils": "fe88b2fd04b6789bd2c9d50c47b140e8453a6886"
-  }
+  },
+  "ps_reference_source": "Vivado 2025.2 ZCU102 board preset 3.4 and generated SDT; not instrument-measured"
 }

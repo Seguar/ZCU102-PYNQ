@@ -2,7 +2,7 @@
 
 Community **PYNQ 4.0.0** SD-image port for the production **ZCU102**, using **Vivado/Vitis 2025.2** and AMD EDF. Ubuntu 24.04 and Python 3.12 come from the official PYNQ root filesystem.
 
-**Status: source preparation; image build and physical boot validation pending.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; neither physical revision is verified here. RevA/RevB engineering samples and modified memory configurations are outside this target.
+**Status: PS hardware export and raw device-tree compilation passed; full image build and physical boot validation pending.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; neither physical revision is verified here. RevA/RevB engineering samples and modified memory configurations are outside this target.
 
 This is a **PS-only boot image port**. It provides Linux/PYNQ infrastructure and requires a user-supplied, compatible application overlay. It does not bundle a base/HDMI/FMC/DMA/PL-DDR design or claim those interfaces work. No RF converter libraries or CLK104 configuration are added by the board recipe.
 

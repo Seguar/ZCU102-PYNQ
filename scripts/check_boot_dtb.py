@@ -43,7 +43,7 @@ cma = [n for n in nodes if prop(n, 'linux,cma-default', 'x') is not None]
 assert len(cma) == 1, cma
 assert prop(cma[0], 'size', 'x') in ('0 20000000', '20000000'), prop(cma[0], 'size', 'x')
 clock = prop('/__symbols__', 'pss_ref_clk')
-assert clock and int(prop(clock, 'clock-frequency', 'x'), 16) == 33333333
+assert clock and int(prop(clock, 'clock-frequency', 'x'), 16) == 33330000
 phy_details = {n: {'reg': prop(n, 'reg', 'x'), 'compatible': prop(n, 'compatible')} for n in nodes if '/ethernet-phy@' in n}
-report = {'status': 'PASS', 'model': model, 'board': 'ZCU102', 'memory_ranges': memories, 'linux_memory_bytes': linux_memory_bytes, 'physical_ps_ddr_bytes': 4 * 1024**3, 'stdout_path': stdout, 'uart_node': serial, 'bootargs': prop('/chosen', 'bootargs'), 'cma': cma[0], 'ps_reference_hz': 33333333, 'phy_nodes': phy_details, 'enabled_pl_intc': False, 'scope': 'offline final DTB inspection; no board boot claim'}
+report = {'status': 'PASS', 'model': model, 'board': 'ZCU102', 'memory_ranges': memories, 'linux_memory_bytes': linux_memory_bytes, 'physical_ps_ddr_bytes': 4 * 1024**3, 'stdout_path': stdout, 'uart_node': serial, 'bootargs': prop('/chosen', 'bootargs'), 'cma': cma[0], 'ps_reference_hz': 33330000, 'phy_nodes': phy_details, 'enabled_pl_intc': False, 'scope': 'offline final DTB inspection; no board boot claim'}
 print(json.dumps(report, indent=2))
