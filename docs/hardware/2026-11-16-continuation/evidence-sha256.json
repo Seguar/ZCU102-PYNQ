@@ -1,0 +1,22 @@
+{
+  "docs/hardware/2026-11-16-continuation/report.md": {
+    "bytes": 3897,
+    "sha256": "3b3f942524e9129281484a1d57621fcf1e0f811c5be0965038bb8b8906975227"
+  },
+  "docs/hardware/2026-11-16-continuation/results.json": {
+    "bytes": 13474,
+    "sha256": "e49aa4f139647e5960b6e13fc188ef148ea8aca4e2d40d75b855f826e3bd1826"
+  },
+  "validation/ps-smoke/build.tcl": {
+    "bytes": 1842,
+    "sha256": "46df823df0453de64e9eda6cf8b24660652c6b41044ab9face8753ebe10e121d"
+  },
+  "validation/ps-smoke/test_overlay.py": {
+    "bytes": 2927,
+    "sha256": "fa2d5a18aaa2c687b125d4c4c4769fe5b0fda608d9da935e4ced8307f7baa877"
+  },
+  "validation/ps-smoke/SHA256.json": {
+    "bytes": 169,
+    "sha256": "bbc68a31e8f5add5a5223a542c9bf74b38605f634ea02b50a0c7172fe3595eb4"
+  }
+}

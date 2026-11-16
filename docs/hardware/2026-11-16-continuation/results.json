@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-16",
+  "status": "PASS_WITH_LIMITS",
+  "scope": "PS-only baseline plus separate matched PS-only validation overlay; no application peripheral claim",
+  "release_image": "v4.0.0-zcu102.1-rc1",
+  "raw_image_sha256": "21934cfb921e6fb6da51c4e0d5775223ff2d7560209432d5f25fca75b6e8becc",
+  "image_bytes_unchanged": true,
+  "normal_reboots": 2,
+  "new_boot_ids_confirmed": true,
+  "remote_reconnect_and_hostname_persistence": "PASS",
+  "services": {
+    "ssh": "active",
+    "jupyter": "active",
+    "private_remote_daemon": "enabled and active",
+    "failed_units": 0
+  },
+  "overlay_build": {
+    "tool": "Vivado 2025.2",
+    "part": "xczu9eg-ffvb1156-2-e",
+    "board_preset": "xilinx.com:zcu102:part0:3.4",
+    "build_exit": 0,
+    "drc_violations": 0,
+    "setup_hold": "N/A: no timed fabric paths",
+    "external_pl_ports": 0,
+    "pl_peripheral_cores": 0
+  },
+  "ssh_complete_runs": [
+    {
+      "status": "PASS",
+      "buffers_freed": 3,
+      "hashes": {
+        "smoke.bit": "a229a6b01d2c2a612e8bef74578f5b830fba7ed50dc83c186b0f2fe1ca286990",
+        "smoke.hwh": "b8cff50892f98e38df478b5e52b23b503341bd5bf6ede292285ea5beca14c699"
+      },
+      "ip_types": {
+        "ps": "xilinx.com:ip:zynq_ultra_ps_e:3.5"
+      },
+      "memory": {
+        "PSDDR": {
+          "type": "DDR4",
+          "base_address": 0,
+          "size": 268435456,
+          "idx": 0
+        }
+      },
+      "fpga_state": "operating",
+      "programming": "PASS",
+      "allocation": [
+        {
+          "words": 1024,
+          "bytes": 4096,
+          "sync_compare": "PASS"
+        },
+        {
+          "words": 262144,
+          "bytes": 1048576,
+          "sync_compare": "PASS"
+        },
+        {
+          "words": 1048576,
+          "bytes": 4194304,
+          "sync_compare": "PASS"
+        }
+      ]
+    },
+    {
+      "status": "PASS",
+      "buffers_freed": 3,
+      "startup_cleanup_complete": true,
+      "hashes": {
+        "smoke.bit": "a229a6b01d2c2a612e8bef74578f5b830fba7ed50dc83c186b0f2fe1ca286990",
+        "smoke.hwh": "b8cff50892f98e38df478b5e52b23b503341bd5bf6ede292285ea5beca14c699"
+      },
+      "ip_types": {
+        "ps": "xilinx.com:ip:zynq_ultra_ps_e:3.5"
+      },
+      "memory": {
+        "PSDDR": {
+          "type": "DDR4",
+          "base_address": 0,
+          "size": 268435456,
+          "idx": 0
+        }
+      },
+      "fpga_state": "operating",
+      "programming": "PASS",
+      "allocation": [
+        {
+          "words": 1024,
+          "bytes": 4096,
+          "sync_compare": "PASS"
+        },
+        {
+          "words": 262144,
+          "bytes": 1048576,
+          "sync_compare": "PASS"
+        },
+        {
+          "words": 1048576,
+          "bytes": 4194304,
+          "sync_compare": "PASS"
+        }
+      ]
+    }
+  ],
+  "jupyter_complete_runs": [
+    {
+      "authenticated": true,
+      "existing_kernels": 0,
+      "execute_reply": "ok",
+      "idle": true,
+      "checks": {
+        "pynq": "4.0.0",
+        "architecture": "aarch64",
+        "math": 510720,
+        "allocations": [
+          {
+            "words": 1024,
+            "bytes": 4096,
+            "sync_compare": "PASS"
+          },
+          {
+            "words": 262144,
+            "bytes": 1048576,
+            "sync_compare": "PASS"
+          },
+          {
+            "words": 1048576,
+            "bytes": 4194304,
+            "sync_compare": "PASS"
+          }
+        ],
+        "freed": 3
+      },
+      "owned_kernel_delete_status": 204
+    },
+    {
+      "authenticated": true,
+      "existing_kernels": 0,
+      "execute_reply": "ok",
+      "idle": true,
+      "checks": {
+        "pynq": "4.0.0",
+        "architecture": "aarch64",
+        "math": 510720,
+        "allocations": [
+          {
+            "words": 1024,
+            "bytes": 4096,
+            "sync_compare": "PASS"
+          },
+          {
+            "words": 262144,
+            "bytes": 1048576,
+            "sync_compare": "PASS"
+          },
+          {
+            "words": 1048576,
+            "bytes": 4194304,
+            "sync_compare": "PASS"
+          }
+        ],
+        "freed": 3
+      },
+      "owned_kernel_delete_status": 204
+    }
+  ],
+  "accepted_buffer_pattern_sync_comparisons": 12,
+  "accepted_buffers_freed": 12,
+  "final_smoke": {
+    "environment": {
+      "status": "pass",
+      "details": {
+        "xrt_environment_present": true
+      }
+    },
+    "identity": {
+      "status": "pass",
+      "details": {
+        "model": "ZynqMP ZCU102 Rev1.0",
+        "architecture": "aarch64",
+        "kernel": "6.12.40-xilinx-g0900176227cc",
+        "python": "3.12.3",
+        "pynq": "4.0.0"
+      }
+    },
+    "memory": {
+      "status": "pass",
+      "details": {
+        "MemTotal": 4016972,
+        "MemAvailable": 3500956,
+        "CmaTotal": 524288,
+        "CmaFree": 518272,
+        "SwapTotal": 524284
+      }
+    },
+    "installed_pins": {
+      "status": "pass",
+      "details": {
+        "pynqmetadata": {
+          "version": "0.2.0",
+          "commit": "7ff39f7e699b854973e4f894fb6e5272534a42f7"
+        },
+        "pynqutils": {
+          "version": "0.1.3",
+          "commit": "fe88b2fd04b6789bd2c9d50c47b140e8453a6886"
+        }
+      }
+    },
+    "numpy_math": {
+      "status": "pass",
+      "details": {
+        "numpy": "1.26.4",
+        "matrix_sum": 510720
+      }
+    },
+    "zocl_devices": {
+      "status": "pass",
+      "details": {
+        "module_loaded": true,
+        "dri_nodes": [
+          "by-path",
+          "card1",
+          "renderD128",
+          "card0"
+        ],
+        "fpga_manager_states": [
+          "operating"
+        ]
+      }
+    },
+    "root_storage": {
+      "status": "pass",
+      "details": {
+        "root_fstype": "ext4",
+        "root_source": "/dev/mmcblk0p2",
+        "root_bytes": 15467515904,
+        "block_devices": {
+          "blockdevices": [
+            {
+              "name": "mtdblock0",
+              "size": 1048576,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "mtdblock1",
+              "size": 5242880,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "mtdblock2",
+              "size": 131072,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "mtdblock3",
+              "size": 6160384,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd0",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd1",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd2",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd3",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd4",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd5",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd6",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd7",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "mmcblk0",
+              "size": 15931539456,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ],
+              "children": [
+                {
+                  "name": "mmcblk0p1",
+                  "size": 104857600,
+                  "type": "part",
+                  "fstype": "vfat",
+                  "mountpoints": [
+                    "/boot"
+                  ]
+                },
+                {
+                  "name": "mmcblk0p2",
+                  "size": 15822470656,
+                  "type": "part",
+                  "fstype": "ext4",
+                  "mountpoints": [
+                    "/"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "nbd8",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd9",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd10",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd11",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd12",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd13",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd14",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            },
+            {
+              "name": "nbd15",
+              "size": 0,
+              "type": "disk",
+              "fstype": null,
+              "mountpoints": [
+                null
+              ]
+            }
+          ]
+        },
+        "swap": [
+          {
+            "type": "file",
+            "size_kib": 524284,
+            "used_kib": 0
+          }
+        ],
+        "machine_id_nonempty": true,
+        "ssh_host_private_key_count": 3
+      }
+    },
+    "device_probe": {
+      "status": "pass",
+      "details": {
+        "registered_device_count": 1,
+        "registered_device_types": [
+          "EmbeddedDevice"
+        ]
+      }
+    },
+    "allocation": {
+      "status": "pass",
+      "details": [
+        {
+          "uint32_count": 1024,
+          "bytes": 4096,
+          "pattern_sync_compare": "pass"
+        },
+        {
+          "uint32_count": 262144,
+          "bytes": 1048576,
+          "pattern_sync_compare": "pass"
+        }
+      ]
+    }
+  },
+  "findings": [
+    "Programming without matching overlay metadata remains unsupported.",
+    "A reload initiated during boot cleanup passed in-process but later kernels lacked the global overlay state; reloading after startup cleanup completed restored cross-process allocation. The test loader now checks cleanup completion before parsing or programming. No installed service was patched.",
+    "An initial HWH guard used the XML root instead of SYSTEMINFO; it stopped before any programming and was corrected.",
+    "Raw bitstream transfer was interrupted before programming; a compressed archive was extracted and exact bit/HWH hashes checked before programming.",
+    "The overlay is separate from the immutable release image and was manually reloaded after reboot; automatic overlay loading is not claimed."
+  ],
+  "known_kernel_observations": [
+    "zocl IRQ index 8 warning",
+    "zocl CMA reserved-node initialization warning",
+    "AES/SHA3 probe error -95",
+    "missing regulatory.db",
+    "Ethernet PTP clock target-frequency warning"
+  ],
+  "kernel_warning_causality": "Not established; successful scoped tests do not establish correctness of untested paths.",
+  "limits": [
+    "No GPIO, DMA engine, FMC, HDMI/video, PL DDR or RF tests",
+    "No external clock measurement",
+    "No physical PCB revision readout",
+    "No power-cycle/cold-boot repeat in this continuation",
+    "Tested buffers up to 4 MiB; not a full-memory stress test",
+    "PSDDR metadata topology size is 256 MiB, not a physical RAM capacity measurement"
+  ],
+  "end_state": {
+    "validation_overlay_loaded": true,
+    "test_kernels_deleted": true,
+    "owned_buffers_freed": true,
+    "automatic_overlay_startup_added": false,
+    "other_boards_touched": false
+  }
+}

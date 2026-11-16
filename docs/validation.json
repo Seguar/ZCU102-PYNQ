@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "physical-boot-and-ps-software-validated-allocation-incomplete",
+  "status": "physical-ps-only-runtime-and-matched-test-overlay-validated-with-limits",
   "release": "v4.0.0-zcu102.1-rc1",
   "checks": {
     "source_contract": "PASS",
@@ -27,8 +27,11 @@
     "authenticated_jupyter_identity_and_numpy": "PASS",
     "root_filesystem_expansion": "PASS",
     "xrt_embedded_device_discovery_with_profile": "PASS",
-    "allocation_4k_and_1m": "NOT_PASSED: Overlay is not downloaded",
-    "normal_reboot_persistence": "NOT_TESTED: existing console session"
+    "allocation_4k_and_1m": "PASS with matched separate overlay",
+    "normal_reboot_persistence": "PASS: two normal reboots",
+    "allocation_4m": "PASS with matched separate overlay",
+    "matched_validation_overlay_programming": "PASS",
+    "ssh_and_authenticated_jupyter_sync_compare": "PASS: two complete three-size runs each"
   },
   "identity_tests_passed": 3,
   "python_distributions_recorded": 288,
@@ -40,11 +43,13 @@
   "configured_ps_reference_hz": 33330000,
   "clock_limit": "Configured preset/DT value, not measured; stock PYNQ UltraScale helper retains 33.333 MHz approximation",
   "not_verified": [
-    "Successful PYNQ buffer allocation/synchronization (requires compatible loaded overlay)",
-    "Normal reboot/persistence retest",
-    "Application overlays, GPIO, DMA, FMC, video, PL DDR",
+    "GPIO, DMA engines, FMC, video, PL DDR and RF",
+    "Automatic application-overlay loading",
+    "Full-memory stress test and cold power-cycle repeat",
     "Physical PCB revision and instrument-measured clocks"
   ],
   "hardware_evidence": "hardware/2026-11-16/public-results.json",
-  "installation_note": "Live hostname/LLMNR customizations are absent from the unchanged release image."
+  "installation_note": "Live hostname/LLMNR customizations are absent from the unchanged release image.",
+  "latest_hardware_evidence": "hardware/2026-11-16-continuation/results.json",
+  "startup_caveat": "Wait for clear_pl_statefile cleanup completion before parsing/loading an overlay; validation loader enforces this."
 }
