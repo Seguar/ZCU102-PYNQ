@@ -6,4 +6,8 @@ The official `zcu102-rev1.0` SDT compiled with the board CMA fragment and a test
 
 SDTGen printed a reference-clock fallback warning; the actual compiled `pss_ref_clk` property was checked against the board preset. No instrument measurement is claimed. PYNQ's stock UltraScale clock helper uses a 33.333 MHz default; it is unchanged, so its calculated PL rates carry that small reference approximation. Precision clock/overlay use requires review and measurement.
 
-Full EDF boot/kernel compilation, complete image assembly, exact-image inspection and physical board boot remain pending. No board, FPGA or SD-card changes have been performed. Publication must disclose its actual validation level.
+All EDF bootbin/kernel/zocl/kernel-devsrc builds and complete image assembly passed. The exact assembled image passed partition bounds, FAT/ext4 integrity, boot-file comparisons, Linux DTB, root identity, module/zocl indexing, dependency commit and SSH service/socket ordering checks. PYNQ 4.0.0, metadata and utility imports passed under ARM user-mode QEMU, along with NumPy sum(arange(1024)) = 523776. Versions of 288 Python distributions and the installed Ubuntu packages were recorded.
+
+The final Linux DTB passed its own strict checks after domain generation: production ZCU102 Rev1.0 identity, UART serial0 at ff000000, Ethernet PHY at c, 4095 MiB exposed from stock 4 GiB, configured reference 33,330,000 Hz, low-memory 512 MiB CMA and no enabled PL interrupt controller.
+
+Fresh physical boot, on-board Jupyter/allocation, application overlays, GPIO, DMA, FMC, video and PL DDR remain **unverified**. See the experimental release for the image and exact hashes. No board, FPGA or SD-card changes have been performed.

@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-16",
+  "status": "image-built-offline-validated",
+  "release": "v4.0.0-zcu102.1-rc1",
+  "checks": {
+    "source_contract": "PASS",
+    "vivado_2025_2_ps_export": "PASS",
+    "container_hardware_and_sdt": "PASS",
+    "raw_sdt_board_fragment_compile": "PASS",
+    "edf_bootbin": "PASS",
+    "edf_kernel": "PASS",
+    "edf_zocl": "PASS",
+    "edf_kernel_devsrc": "PASS",
+    "complete_image": "PASS",
+    "exact_image_partition_bounds": "PASS",
+    "exact_image_fat_ext4": "PASS",
+    "exact_image_boot_files": "PASS",
+    "exact_image_linux_dtb": "PASS",
+    "exact_image_root_identity": "PASS",
+    "exact_image_modules_and_zocl_index": "PASS",
+    "exact_image_ssh_unit_ordering": "PASS",
+    "installed_python_git_commits": "PASS",
+    "arm_user_qemu_imports_and_numpy_math": "PASS"
+  },
+  "identity_tests_passed": 3,
+  "python_distributions_recorded": 288,
+  "raw_image": {
+    "bytes": 8266973184,
+    "sha256": "21934cfb921e6fb6da51c4e0d5775223ff2d7560209432d5f25fca75b6e8becc"
+  },
+  "linux_memory_bytes": 4293918720,
+  "configured_ps_reference_hz": 33330000,
+  "clock_limit": "Configured preset/DT value, not measured; stock PYNQ UltraScale helper retains 33.333 MHz approximation",
+  "not_verified": [
+    "Physical ZCU102 boot",
+    "Physical Jupyter execution and allocation",
+    "Application overlays, GPIO, DMA, FMC, video, PL DDR"
+  ]
+}

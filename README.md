@@ -2,9 +2,13 @@
 
 Community **PYNQ 4.0.0** SD-image port for the production **ZCU102**, using **Vivado/Vitis 2025.2** and AMD EDF. Ubuntu 24.04 and Python 3.12 come from the official PYNQ root filesystem.
 
-**Status: PS hardware export and raw device-tree compilation passed; full image build and physical boot validation pending.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; neither physical revision is verified here. RevA/RevB engineering samples and modified memory configurations are outside this target.
+**Status: experimental SD image built and checked offline; physical board boot and runtime tests remain pending.** This repository is independent of the ZCU216 RFSoC port. It targets `xczu9eg-ffvb1156-2-e`, board preset `xilinx.com:zcu102:part0:3.4`, and the stock **4 GiB PS DDR4 SODIMM**. It uses the official `zcu102-rev1.0` device-tree description. AMD's matching Rev1.1 description inherits Rev1.0 and changes model/compatible identity; neither physical revision is verified here. RevA/RevB engineering samples and modified memory configurations are outside this target.
 
 This is a **PS-only boot image port**. It provides Linux/PYNQ infrastructure and requires a user-supplied, compatible application overlay. It does not bundle a base/HDMI/FMC/DMA/PL-DDR design or claim those interfaces work. No RF converter libraries or CLK104 configuration are added by the board recipe.
+
+## Image download
+
+Download the image and `SHA256SUMS` from the [experimental PYNQ 4 release](https://github.com/Seguar/ZCU102-PYNQ/releases/tag/v4.0.0-zcu102.1-rc1). Use a **16 GB or larger SD card**; the raw image is 8,266,973,184 bytes. The exact image passed offline filesystem, boot-artifact, device-tree, identity and module checks. ARM QEMU imports/math passed. It has **not** been boot-tested on the physical board. The release supplies provenance, package inventory, kernel configuration and resolved EDF layer revisions.
 
 ## Build
 
