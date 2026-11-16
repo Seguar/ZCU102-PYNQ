@@ -1,6 +1,8 @@
 # Validation
 
-**Latest:** the [continuation report](hardware/2026-11-16-continuation/report.md) records two normal reboots, matched PS-only overlay programming, and SSH/Jupyter allocation passes. It supersedes earlier incomplete allocation/reboot status below. The optional overlay is separate from the immutable image; application peripherals remain untested.
+**Latest fabric example:** [AXI BRAM/internal GPIO-loopback results](hardware/2026-11-16-bram-gpio/report.md) passed in SSH and Jupyter before/after reboot, with sources and an optional matched overlay. Physical GPIO pins, DMA engines and the full zPulse application remain unverified.
+
+**Earlier PS-only baseline:** the [continuation report](hardware/2026-11-16-continuation/report.md) records two normal reboots, matched PS-only overlay programming, and SSH/Jupyter allocation passes. It supersedes earlier incomplete allocation/reboot status below. The optional overlay is separate from the immutable image; application peripherals remain untested.
 
 Checked 2026-11-16. Source contract and three offline identity-cleanup tests passed. Real Vivado 2025.2 recognizes the required production ZU9EG part and ZCU102 board preset 3.4; the PS-only XSA export completed successfully. Container hardware and SDT wrapper modes passed.
 

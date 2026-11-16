@@ -1,0 +1,303 @@
+{
+  "date": "2026-11-16",
+  "status": "PASS_WITH_LIMITS",
+  "scope": "16 KiB AXI BRAM and 32-bit internal AXI GPIO loopback; separate optional overlay",
+  "architecture_reference": {
+    "repository": "https://github.com/bmatiasruben/zPulse",
+    "commit": "f1ce1e3b0742e6168766a35c4bcaef2f7d793fc0",
+    "reuse": "Independent minimal design; no upstream source code imported; full application not tested"
+  },
+  "release_image": "v4.0.0-zcu102.1-rc1",
+  "image_bytes_unchanged": true,
+  "build": {
+    "vivado": "2025.2",
+    "part": "xczu9eg-ffvb1156-2-e",
+    "preset": "xilinx.com:zcu102:part0:3.4",
+    "exit": 0,
+    "drc_violations": 0,
+    "worst_setup_slack_ns": 6.022,
+    "worst_hold_slack_ns": 0.01,
+    "timing_failing_endpoints": 0,
+    "external_pl_ports": 0
+  },
+  "normal_reboot": {
+    "count": 1,
+    "boot_id_changed": true,
+    "startup_cleanup_complete_before_reprogramming": true,
+    "remote_reconnect": "PASS"
+  },
+  "ssh_runs": [
+    {
+      "status": "PASS",
+      "pynq": "4.0.0",
+      "hashes": {
+        "bram_gpio.bit": "9fc137e8575ac002990e2277c7f5720601dbabd6f5bc42f6523c22afee5aced1",
+        "bram_gpio.hwh": "bac05492ebd4b8c1f460d98ed4fcec78ab59fd391abf2dc891865fdf4597dc79"
+      },
+      "metadata": {
+        "bram_ctrl": {
+          "phys_addr": 2684354560,
+          "addr_range": 16384
+        },
+        "gpio_loop": {
+          "phys_addr": 2684420096,
+          "addr_range": 65536
+        }
+      },
+      "fpga_state": "operating",
+      "programmed": true,
+      "startup_cleanup_complete": true,
+      "fclk0_mhz_software_calculated": 99.999,
+      "external_pl_ports": 0,
+      "gpio_tri_register_initial": 4294967295,
+      "bram": {
+        "bytes": 16384,
+        "patterns": 8,
+        "word_comparisons": 32768,
+        "access": "32-bit MMIO writes and actual readbacks"
+      },
+      "gpio": {
+        "patterns": 132,
+        "width": 32,
+        "output_register_readbacks": 132,
+        "input_register_loopback_readbacks": 132,
+        "physical_board_pins": false
+      },
+      "state_restored": {
+        "bram": true,
+        "gpio": true
+      },
+      "allocations": [
+        {
+          "bytes": 4096,
+          "sync_compare": "PASS"
+        },
+        {
+          "bytes": 1048576,
+          "sync_compare": "PASS"
+        },
+        {
+          "bytes": 4194304,
+          "sync_compare": "PASS"
+        }
+      ],
+      "buffers_freed": 3
+    },
+    {
+      "status": "PASS",
+      "pynq": "4.0.0",
+      "hashes": {
+        "bram_gpio.bit": "9fc137e8575ac002990e2277c7f5720601dbabd6f5bc42f6523c22afee5aced1",
+        "bram_gpio.hwh": "bac05492ebd4b8c1f460d98ed4fcec78ab59fd391abf2dc891865fdf4597dc79"
+      },
+      "metadata": {
+        "bram_ctrl": {
+          "phys_addr": 2684354560,
+          "addr_range": 16384
+        },
+        "gpio_loop": {
+          "phys_addr": 2684420096,
+          "addr_range": 65536
+        }
+      },
+      "fpga_state": "operating",
+      "programmed": true,
+      "startup_cleanup_complete": true,
+      "fclk0_mhz_software_calculated": 99.999,
+      "external_pl_ports": 0,
+      "gpio_tri_register_initial": 4294967295,
+      "bram": {
+        "bytes": 16384,
+        "patterns": 8,
+        "word_comparisons": 32768,
+        "access": "32-bit MMIO writes and actual readbacks"
+      },
+      "gpio": {
+        "patterns": 132,
+        "width": 32,
+        "output_register_readbacks": 132,
+        "input_register_loopback_readbacks": 132,
+        "physical_board_pins": false
+      },
+      "state_restored": {
+        "bram": true,
+        "gpio": true
+      },
+      "allocations": [
+        {
+          "bytes": 4096,
+          "sync_compare": "PASS"
+        },
+        {
+          "bytes": 1048576,
+          "sync_compare": "PASS"
+        },
+        {
+          "bytes": 4194304,
+          "sync_compare": "PASS"
+        }
+      ],
+      "buffers_freed": 3
+    }
+  ],
+  "authenticated_jupyter_runs": [
+    {
+      "authenticated": true,
+      "existing_kernels": 0,
+      "execute_reply": "ok",
+      "idle": true,
+      "checks": {
+        "status": "PASS",
+        "pynq": "4.0.0",
+        "hashes": {
+          "bram_gpio.bit": "9fc137e8575ac002990e2277c7f5720601dbabd6f5bc42f6523c22afee5aced1",
+          "bram_gpio.hwh": "bac05492ebd4b8c1f460d98ed4fcec78ab59fd391abf2dc891865fdf4597dc79"
+        },
+        "metadata": {
+          "bram_ctrl": {
+            "phys_addr": 2684354560,
+            "addr_range": 16384
+          },
+          "gpio_loop": {
+            "phys_addr": 2684420096,
+            "addr_range": 65536
+          }
+        },
+        "fpga_state": "operating",
+        "programmed": false,
+        "startup_cleanup_complete": true,
+        "fclk0_mhz_software_calculated": 99.999,
+        "external_pl_ports": 0,
+        "gpio_tri_register_initial": 4294967295,
+        "bram": {
+          "bytes": 16384,
+          "patterns": 8,
+          "word_comparisons": 32768,
+          "access": "32-bit MMIO writes and actual readbacks"
+        },
+        "gpio": {
+          "patterns": 132,
+          "width": 32,
+          "output_register_readbacks": 132,
+          "input_register_loopback_readbacks": 132,
+          "physical_board_pins": false
+        },
+        "state_restored": {
+          "bram": true,
+          "gpio": true
+        },
+        "allocations": [
+          {
+            "bytes": 4096,
+            "sync_compare": "PASS"
+          },
+          {
+            "bytes": 1048576,
+            "sync_compare": "PASS"
+          },
+          {
+            "bytes": 4194304,
+            "sync_compare": "PASS"
+          }
+        ],
+        "buffers_freed": 3
+      },
+      "owned_kernel_delete_status": 204
+    },
+    {
+      "authenticated": true,
+      "existing_kernels": 0,
+      "execute_reply": "ok",
+      "idle": true,
+      "checks": {
+        "status": "PASS",
+        "pynq": "4.0.0",
+        "hashes": {
+          "bram_gpio.bit": "9fc137e8575ac002990e2277c7f5720601dbabd6f5bc42f6523c22afee5aced1",
+          "bram_gpio.hwh": "bac05492ebd4b8c1f460d98ed4fcec78ab59fd391abf2dc891865fdf4597dc79"
+        },
+        "metadata": {
+          "bram_ctrl": {
+            "phys_addr": 2684354560,
+            "addr_range": 16384
+          },
+          "gpio_loop": {
+            "phys_addr": 2684420096,
+            "addr_range": 65536
+          }
+        },
+        "fpga_state": "operating",
+        "programmed": false,
+        "startup_cleanup_complete": true,
+        "fclk0_mhz_software_calculated": 99.999,
+        "external_pl_ports": 0,
+        "gpio_tri_register_initial": 4294967295,
+        "bram": {
+          "bytes": 16384,
+          "patterns": 8,
+          "word_comparisons": 32768,
+          "access": "32-bit MMIO writes and actual readbacks"
+        },
+        "gpio": {
+          "patterns": 132,
+          "width": 32,
+          "output_register_readbacks": 132,
+          "input_register_loopback_readbacks": 132,
+          "physical_board_pins": false
+        },
+        "state_restored": {
+          "bram": true,
+          "gpio": true
+        },
+        "allocations": [
+          {
+            "bytes": 4096,
+            "sync_compare": "PASS"
+          },
+          {
+            "bytes": 1048576,
+            "sync_compare": "PASS"
+          },
+          {
+            "bytes": 4194304,
+            "sync_compare": "PASS"
+          }
+        ],
+        "buffers_freed": 3
+      },
+      "owned_kernel_delete_status": 204
+    }
+  ],
+  "totals": {
+    "complete_passes": 4,
+    "bram_word_comparisons": 131072,
+    "gpio_input_loopback_patterns": 528,
+    "gpio_output_register_comparisons": 528,
+    "successful_allocations_freed": 12,
+    "owned_kernels_deleted": 2
+  },
+  "state_restored_each_run": true,
+  "end_state": {
+    "jupyter": "active",
+    "ssh": "active",
+    "private_remote_service": "active and enabled",
+    "failed_units": 0,
+    "fpga": "operating",
+    "validation_overlay_loaded": true,
+    "test_kernels_deleted": true,
+    "buffers_freed": true,
+    "automatic_overlay_loading_added": false,
+    "other_boards_touched": false
+  },
+  "test_setup_finding": "Initial TRI==0 assertion stopped before pattern writes. HWH has C_ALL_OUTPUTS=1, C_ALL_INPUTS_2=1, C_TRI_DEFAULT=0xffffffff. Corrected test validates fixed directions from HWH and preserves TRI while testing actual output/input registers.",
+  "secondary_error_reporter_finding": "The initial uncaught assertion also triggered an apport package-manager-detection error for the PynqLinux OS ID. No OS/error-reporter settings were modified; the test CLI now reports failures directly as JSON.",
+  "limits": [
+    "GPIO loopback is internal, not physical LED/switch/connector validation",
+    "Full zPulse pulse generator/transceiver/phase-alignment/web application not tested",
+    "No Si570 configuration writes or external timing measurement",
+    "No DMA engine, FMC, video, PL DDR or RF tests",
+    "Reported FCLK0 99.999 MHz is software-calculated, not measured",
+    "Cold power-cycle, long stress and all-temperature operation not tested"
+  ],
+  "existing_kernel_warnings": "Earlier documented boot IRQ/CMA/crypto/regulatory/PTP observations remain; successful scoped tests do not establish their cause."
+}

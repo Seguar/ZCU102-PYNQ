@@ -1,0 +1,26 @@
+{
+  "docs/hardware/2026-11-16-bram-gpio/report.md": {
+    "bytes": 3619,
+    "sha256": "08226244f86b204281d1a86545c4217b09849181a8666e2951f25865482f8d55"
+  },
+  "docs/hardware/2026-11-16-bram-gpio/results.json": {
+    "bytes": 9182,
+    "sha256": "3ef322f48b4db568511a8388d46ce3fb0c1a9b792adc79873903b81a255128cb"
+  },
+  "validation/bram-gpio/README.md": {
+    "bytes": 3633,
+    "sha256": "b9f6505a091de696cbafb2f06b17b93050d77bd0c0bab950bd4871a82bc793d4"
+  },
+  "validation/bram-gpio/SHA256.json": {
+    "bytes": 177,
+    "sha256": "6a6225673ba1f6daf8ceea53fe2e5d07f49569aaede4662c679440a9f86cee3f"
+  },
+  "validation/bram-gpio/build.tcl": {
+    "bytes": 4329,
+    "sha256": "c02dc45b76a3cfd745575708ef0ee3e70af2cc5a5f08aeb9e6b4b3a179bae8ea"
+  },
+  "validation/bram-gpio/test_overlay.py": {
+    "bytes": 7277,
+    "sha256": "1357674f820a8325a168feb0b1f0b8b871b832a595cc2c0e6472e98141bf58aa"
+  }
+}
